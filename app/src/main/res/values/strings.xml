@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Alışveriş Sepetim</string>
+    <string name="app_name_splash_screen">Alışveriş\nSepetim</string>
+
+    <string name="error_text_blank_field">Bu alan boş bırakılamaz</string>
+
+    <string name="toast_text_login_error">Kullanıcı adı ya da şifre hatalı.</string>
+    <string name="toast_text_exit">Çıkış yapmak içn bir kez daha geri butonuna basınız.</string>
+
+    <string name="hint_text_username">Kullanıcı Adı</string>
+    <string name="hint_text_password">Şifre</string>
+
+    <string name="button_text_login">Giriş</string>
+
+    <string name="info_text_remember_me">Beni Hatırla</string>
+
 </resources>

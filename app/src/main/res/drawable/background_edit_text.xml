@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mehmet Ozdemir on 9/19/19 4:54 PM
+  ~ Copyright (c) 2019 . All rights reserved.
+  ~ Last modified 9/19/19 4:54 PM
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Color -->
+    <corners android:radius="@dimen/radius_medium" />
+
+    <!-- Border Color -->
+    <padding
+        android:bottom="@dimen/padding_container_medium"
+        android:left="@dimen/padding_container_medium"
+        android:right="@dimen/padding_container_medium"
+        android:top="@dimen/padding_container_medium" />
+
+    <!-- Round Corners -->
+    <solid android:color="@android:color/white" />
+    <stroke
+        android:width="@dimen/border_stroke_width"
+        android:color="@color/colorPrimary" />
+</shape>
