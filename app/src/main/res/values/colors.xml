@@ -5,4 +5,9 @@
     <color name="colorPrimaryDark">#B92317</color>
     <color name="colorAccent">#000000</color>
 
+    <color name="color_on_road">#4DAE50</color>
+    <color name="color_preparing">#FF8D02</color>
+    <color name="color_waiting_confirmation">#ED2939</color>
+    <color name="color_unknown_status">#ABABAB</color>
+
 </resources>

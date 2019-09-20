@@ -34,7 +34,7 @@ public class LoginFragment extends Fragment {
 
     //Class Constants
     private final String TAG = LoginFragment.class.getName();
-    private final long WAIT_DURATION = 2 * 1000;
+    private final long WAIT_DURATION = 1 * 1000;
 
     //Class Variables
     private String username;
@@ -116,7 +116,7 @@ public class LoginFragment extends Fragment {
                         Log.d(TAG, "success login");
                         if (rememberMeSwitch.isChecked()) {
                             Log.d(TAG, "remember me stored");
-                            Hawk.put(Constants.HAWK_PARAMETER_IS_USER_LOGIN, true);
+                            Hawk.put(Constants.HAWK_PARAMETER_IS_REMEMBER_ME, true);
                         }
                         EventBus.getDefault().post(new LoginPageEvent(LoginPageEvent.LoginPages.MAIN));
                     } else {

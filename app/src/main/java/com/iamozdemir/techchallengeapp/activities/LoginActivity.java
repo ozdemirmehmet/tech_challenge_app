@@ -37,13 +37,16 @@ public class LoginActivity extends AppCompatActivity {
     private final String TAG = LoginActivity.class.getName();
 
     //Class Variables
-    private boolean isUserLogin;
+    private boolean isRememberMe;
     private boolean isBackButtonPressed = false;
     private Handler backButtonControlHandler;
     private Runnable backButtonControlRunnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (savedInstanceState != null) {
+            savedInstanceState = null;
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -81,8 +84,8 @@ public class LoginActivity extends AppCompatActivity {
             LoginActivity.this.finish();
         }
 
-        isUserLogin = Hawk.get(Constants.HAWK_PARAMETER_IS_USER_LOGIN, false);
-        openSplashScreenFragment(isUserLogin);
+        isRememberMe = Hawk.get(Constants.HAWK_PARAMETER_IS_REMEMBER_ME, false);
+        openSplashScreenFragment(isRememberMe);
     }
 
     @Override
@@ -109,8 +112,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onPause();
     }
 
-    private void openSplashScreenFragment(boolean isUserLogin) {
-        SplashScreenFragment fragment = SplashScreenFragment.getInstance(isUserLogin);
+    private void openSplashScreenFragment(boolean isRememberMe) {
+        SplashScreenFragment fragment = SplashScreenFragment.getInstance(isRememberMe);
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.replace(R.id.frame_layout, fragment);
@@ -139,7 +142,7 @@ public class LoginActivity extends AppCompatActivity {
         Object[] items = null;
         switch (event.getPage()) {
             case SPLASH_SCREEN:
-                openSplashScreenFragment(isUserLogin);
+                openSplashScreenFragment(isRememberMe);
                 break;
             case LOGIN:
                 openLoginFragment();

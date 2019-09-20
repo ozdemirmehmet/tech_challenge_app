@@ -2,6 +2,8 @@
     <string name="app_name">Alışveriş Sepetim</string>
     <string name="app_name_splash_screen">Alışveriş\nSepetim</string>
 
+    <string name="api_base_url" translatable="false">http://kariyertechchallenge.mockable.io</string>
+
     <string name="error_text_blank_field">Bu alan boş bırakılamaz</string>
 
     <string name="toast_text_login_error">Kullanıcı adı ya da şifre hatalı.</string>
@@ -11,7 +13,24 @@
     <string name="hint_text_password">Şifre</string>
 
     <string name="button_text_login">Giriş</string>
+    <string name="button_text_orders">Siparişlerim</string>
+    <string name="button_text_exit">Çıkış Yap</string>
+    <string name="button_text_yes">Evet</string>
+    <string name="button_text_no">Hayır</string>
+    <string name="button_text_try_again">Tekrar Dene</string>
 
     <string name="info_text_remember_me">Beni Hatırla</string>
+    <string name="info_text_on_road">Siparişin Yolda</string>
+    <string name="info_text_preparing">Hazırlanıyor</string>
+    <string name="info_text_waiting_confirmation">Onay Bekliyor</string>
+    <string name="info_text_unknown_status">Durum Bilinmiyor</string>
+
+    <string name="fragment_header_order_list">SİPARİŞLERİM</string>
+
+    <string name="dialog_header_text_exit">Çıkış</string>
+    <string name="dialog_header_text_error">Hata</string>
+
+    <string name="dialog_description_text_exit">Çıkış yapmak istediğinize emin misiniz?</string>
+    <string name="dialog_description_text_error">Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.</string>
 
 </resources>

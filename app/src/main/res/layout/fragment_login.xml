@@ -103,10 +103,10 @@
         <Button
             android:id="@+id/button_login"
             android:layout_width="0dp"
-            android:layout_height="@dimen/size_button"
+            android:layout_height="@dimen/size_button_medium"
             android:layout_marginTop="@dimen/margin_container_xxxxlarge"
             android:layout_marginBottom="@dimen/margin_container_medium"
-            android:background="@drawable/background_button"
+            android:background="@drawable/background_filled_button"
             android:text="@string/button_text_login"
             android:textAllCaps="false"
             android:textColor="@android:color/white"

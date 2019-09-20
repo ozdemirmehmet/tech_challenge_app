@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mehmet Ozdemir on 9/20/19 10:49 AM
+  ~ Copyright (c) 2019 . All rights reserved.
+  ~ Last modified 9/15/19 7:01 PM
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="13dp"
+    android:height="22dp"
+    android:viewportWidth="13"
+    android:viewportHeight="22">
+
+    <group
+        android:pivotX="5"
+        android:pivotY="5"
+        android:scaleX=".9"
+        android:scaleY=".9"
+        android:translateX="1.44"
+        android:translateY="1.72">
+        <path
+            android:fillColor="#413E3E"
+            android:pathData="M9.99 9.201L0.95 0.16 a0.54 0.54 0 0 0-0.768 0 0.54 0.54 0 0 0 0 0.767l8.656 8.656-8.656
+8.656a0.546 0.546 0 1 0 0.382 0.928 0.53 0.53 0 0 0 0.381-0.16l9.042-9.042A0.54 0.54 0 0 0
+9.99 9.2z" />
+        <path
+            android:pathData="M8.16 9.583L-0.158 1.266c-0.4-0.4-0.4-1.045 0-1.446 0.4 -0.4 1.045-0.4 1.446 0l9.041
+9.042c0.398 0.398 0.396 1.05-0.004 1.442l-9.035 9.035c-0.193 0.2 -0.457 0.308 -0.727 0.308
+A1.026 1.026 0 0 1-0.157 17.9l8.316-8.317z"
+            android:strokeWidth=".99"
+            android:strokeColor="#413E3E" />
+    </group>
+</vector>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="size_button">42dp</dimen>
+    <dimen name="size_button_small">36dp</dimen>
+    <dimen name="size_button_medium">42dp</dimen>
 
+    <dimen name="size_icon_xxsmall">12dp</dimen>
+    <dimen name="size_icon_xsmall">18dp</dimen>
     <dimen name="size_icon_small">24dp</dimen>
     <dimen name="size_icon_medium">36dp</dimen>
     <dimen name="size_icon_large">48dp</dimen>
@@ -37,6 +40,8 @@
 
     <dimen name="radius_medium">12dip</dimen>
     <dimen name="height_divider">1dp</dimen>
+    <dimen name="width_divider">1dp</dimen>
     <dimen name="border_stroke_width">1dp</dimen>
+    <dimen name="card_elevation_small">4dp</dimen>
 
 </resources>

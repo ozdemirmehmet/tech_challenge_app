@@ -28,7 +28,7 @@ public class SplashScreenFragment extends Fragment {
     private final String TAG = SplashScreenFragment.class.getName();
 
     //Class Variables
-    private boolean isUserLogin;
+    private boolean isRememberMe;
     private Handler waitHandler;
     private Runnable waitRunnable;
 
@@ -36,9 +36,9 @@ public class SplashScreenFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static SplashScreenFragment getInstance(boolean isUserLogin) {
+    public static SplashScreenFragment getInstance(boolean isRememberMe) {
         SplashScreenFragment fragment = new SplashScreenFragment();
-        fragment.isUserLogin = isUserLogin;
+        fragment.isRememberMe = isRememberMe;
         fragment.waitHandler = new Handler();
         return fragment;
     }
@@ -56,7 +56,7 @@ public class SplashScreenFragment extends Fragment {
         waitRunnable = new Runnable() {
             @Override
             public void run() {
-                if (isUserLogin) {
+                if (isRememberMe) {
                     EventBus.getDefault().post(new LoginPageEvent(LoginPageEvent.LoginPages.MAIN));
                 } else {
                     EventBus.getDefault().post(new LoginPageEvent(LoginPageEvent.LoginPages.LOGIN));

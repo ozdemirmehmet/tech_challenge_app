@@ -15,5 +15,5 @@ public class Constants {
 
     public static final String HAWK_PARAMETER_LOGIN_USERNAME = "hawkLoginUsername";
     public static final String HAWK_PARAMETER_LOGIN_PASSWORD = "hawkLoginPassword";
-    public static final String HAWK_PARAMETER_IS_USER_LOGIN = "hawkIsUserLogin";
+    public static final String HAWK_PARAMETER_IS_REMEMBER_ME = "hawkIsRememberMe";
 }
