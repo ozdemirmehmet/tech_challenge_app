@@ -118,7 +118,7 @@ public class OrderListAdapter extends RecyclerView.Adapter {
             orderListViewHolder.productDetailsTextView.setText(order.getProduct().getDetails());
             orderListViewHolder.productPriceTextView.setText("₺" + order.getProduct().getPrice());
 
-            if (order.getDetailsViewHeight() == 0) {
+            if (order.getDetailsViewHeight() == 0) {//item yüksekliği daha önce hesaplanmadıysa hasaplanacak.
                 ViewTreeObserver vto = orderListViewHolder.productDetailsView.getViewTreeObserver();
                 vto.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
                     @Override
@@ -129,7 +129,7 @@ public class OrderListAdapter extends RecyclerView.Adapter {
                         return false;
                     }
                 });
-            } else {
+            } else {//item' ın son haline, detay açık/kapalı, göre gelmesi sağlandı.
                 if (order.isDetailsVisible()) {
                     showProductDetails(orderListViewHolder.productDetailsView, order);
                 } else {

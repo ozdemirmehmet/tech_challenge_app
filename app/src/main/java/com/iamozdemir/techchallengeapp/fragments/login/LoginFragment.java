@@ -70,6 +70,7 @@ public class LoginFragment extends Fragment {
     }
 
     private void init(View view) {
+        //kullanıcı adı ve şifre bilgileri hawk kütüphanesi yardımıyla elde ediliyor.
         username = Hawk.get(Constants.HAWK_PARAMETER_LOGIN_USERNAME);
         password = Hawk.get(Constants.HAWK_PARAMETER_LOGIN_PASSWORD);
 
@@ -116,6 +117,8 @@ public class LoginFragment extends Fragment {
                         Log.d(TAG, "success login");
                         if (rememberMeSwitch.isChecked()) {
                             Log.d(TAG, "remember me stored");
+                            //Otomatik login sisteminin çalışması için, boolean değişken hawk kütüphanesi
+                            //yardımı ile cihaza kaydedildi.
                             Hawk.put(Constants.HAWK_PARAMETER_IS_REMEMBER_ME, true);
                         }
                         EventBus.getDefault().post(new LoginPageEvent(LoginPageEvent.LoginPages.MAIN));
@@ -141,6 +144,7 @@ public class LoginFragment extends Fragment {
 
     @Override
     public void onPause() {
+        //onPause durumu oluşması halinde devam eden handler yapılarının callback'leri kaldırılarak olası crash'lerin önüne geçilmiştir.
         if (waitHandler != null && waitRunable != null) {
             waitHandler.removeCallbacks(waitRunable);
         }

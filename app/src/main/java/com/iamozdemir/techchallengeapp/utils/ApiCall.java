@@ -23,6 +23,7 @@ public class ApiCall {
 
     private static ApiServicesInterface apiServicesInterface;
 
+    //Singleton yapısı oluşturuldu.
     public final static void createInstance(Context context) {
         if (instance == null) {
             instance = new ApiCall(context);

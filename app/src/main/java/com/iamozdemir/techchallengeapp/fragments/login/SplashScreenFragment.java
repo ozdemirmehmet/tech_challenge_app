@@ -26,6 +26,7 @@ public class SplashScreenFragment extends Fragment {
 
     //Class Constants
     private final String TAG = SplashScreenFragment.class.getName();
+    private final long SPLASH_SCREEN_WAITING_DURATION = 2 * 1000;
 
     //Class Variables
     private boolean isRememberMe;
@@ -56,6 +57,8 @@ public class SplashScreenFragment extends Fragment {
         waitRunnable = new Runnable() {
             @Override
             public void run() {
+                //Ekran belirli bir süre bekletildikten sonra otomatik login
+                //sisteminin durumuna göre ilgili ekranın açılması sağlandı.
                 if (isRememberMe) {
                     EventBus.getDefault().post(new LoginPageEvent(LoginPageEvent.LoginPages.MAIN));
                 } else {
@@ -67,6 +70,7 @@ public class SplashScreenFragment extends Fragment {
 
     @Override
     public void onPause() {
+        //onPause durumu oluşması halinde devam eden handler yapılarının callback'leri kaldırılarak olası crash'lerin önüne geçilmiştir.
         if (waitHandler != null && waitRunnable != null) {
             waitHandler.removeCallbacks(waitRunnable);
         }
@@ -78,6 +82,6 @@ public class SplashScreenFragment extends Fragment {
     public void onResume() {
         super.onResume();
         Log.d(TAG, "Splash Screen duration started");
-        waitHandler.postDelayed(waitRunnable, Constants.SPLASH_SCREEN_WAITING_DURATION);
+        waitHandler.postDelayed(waitRunnable, SPLASH_SCREEN_WAITING_DURATION);
     }
 }

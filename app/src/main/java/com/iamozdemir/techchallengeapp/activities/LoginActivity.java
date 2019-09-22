@@ -69,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         try {
             JSONObject keysObject = new JSONObject(getKeys());
             if (keysObject.has(Constants.LOGIN_USERNAME) && keysObject.has(Constants.LOGIN_PASSWORD)) {
+                //Kullanıcı adı ve şifre bilgileri hawk kütüphanesi yardımıyla güvenli bir şekilde cihaza kaydediliyor.
                 Hawk.delete(Constants.HAWK_PARAMETER_LOGIN_USERNAME);
                 Hawk.put(Constants.HAWK_PARAMETER_LOGIN_USERNAME, keysObject.getString(Constants.LOGIN_USERNAME));
 
@@ -84,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
             LoginActivity.this.finish();
         }
 
+        //Otomatik login sisteminin çalışması kontrol edecek boolean değişken alınıyor. Default değerimiz false.
         isRememberMe = Hawk.get(Constants.HAWK_PARAMETER_IS_REMEMBER_ME, false);
         openSplashScreenFragment(isRememberMe);
     }
@@ -106,6 +108,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onPause() {
+        //onPause durumu oluşması halinde devam eden handler yapılarının callback'leri kaldırılarak olası crash'lerin önüne geçilmiştir.
         if (backButtonControlHandler != null && backButtonControlRunnable != null) {
             backButtonControlHandler.removeCallbacks(backButtonControlRunnable);
         }
@@ -136,6 +139,7 @@ public class LoginActivity extends AppCompatActivity {
         this.finish();
     }
 
+    //EventBus tarafından LoginPageEvent objesi ile yayın yapılması halinde tetiklenecek method.
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessage(final LoginPageEvent event) {
         closeKeyboard();
@@ -153,6 +157,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    //Klavye eğer açıksa kapatmak için kullanılan method.
     private void closeKeyboard() {
         View view1 = getCurrentFocus();
         if (view1 != null) {

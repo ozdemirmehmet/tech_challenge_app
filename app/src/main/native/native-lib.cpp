@@ -1,6 +1,8 @@
-//
-// Created by mozdemir on 6/26/2018.
-//
+/*
+ * Created by Mehmet Ozdemir on 9/18/19 12:04 PM
+ * Copyright (c) 2019 . All rights reserved.
+ * Last modified 9/18/19 11:58 AM
+ */
 
 #include <jni.h>
 

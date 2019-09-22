@@ -8,8 +8,6 @@ package com.iamozdemir.techchallengeapp.utils;
 
 public class Constants {
 
-    public static final long SPLASH_SCREEN_WAITING_DURATION = 2 * 1000;
-
     public static final String LOGIN_USERNAME = "loginUsername";
     public static final String LOGIN_PASSWORD = "loginPassword";
 

@@ -56,12 +56,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openLoginActivity() {
+        //Otomatik login sistemini devre dışı bırakmak için boolean değişken cihazdan siliniyor.
         Hawk.delete(Constants.HAWK_PARAMETER_IS_REMEMBER_ME);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         this.finish();
     }
 
+    //EventBus tarafından MainPageEvent objesi ile yayın yapılması halinde tetiklenecek method.
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessage(final MainPageEvent event) {
         closeKeyboard();
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Klavye eğer açıksa kapatmak için kullanılan method.
     private void closeKeyboard() {
         View view1 = getCurrentFocus();
         if (view1 != null) {
